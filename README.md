@@ -7,21 +7,21 @@ For the old version of raspberry pi, you may install **VNC** supported package, 
 ## Usage
 
 ### for raspberry pi
-    - Enable the VNC for raspberry <br/>
+- Enable the VNC for raspberry <br/>
     ```
     sudo raspi-config
     ```
     selecting `9. Advanceed Options` -> `A5 VNC`-> `Yes`
-    - Add `vncboot` to `/etc/init.d` and add the exectuable file to boot configure <br/>
+- Add `vncboot` to `/etc/init.d` and add the exectuable file to boot configure <br/>
     ```
     sudo chmod 755 /etc/init.d/vncboot
     sudo update-rc.d vncboot defaults
     ```
-    - Reboot raspberry pi
+- Reboot raspberry pi
 
 ### for your server
-    - Open your server's remote desktop (e.g.*remmina* for Ubuntu/Linux mint, *VNC Viewer* for Win, which support VNC)
-    - Set the configure for VNC connection (the port and user are set in the `vncboot`)
+- Open your server's remote desktop (e.g.*remmina* for Ubuntu/Linux mint, *VNC Viewer* for Win, which support VNC)
+- Set the configure for VNC connection (the port and user are set in the `vncboot`)
     ```
     VNC Server: <IP>:0
     Username: 'pi'
